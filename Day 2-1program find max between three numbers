@@ -1,0 +1,17 @@
+public class Greater {
+    public static void main(String[]args){
+        int a=20;
+        int b=34;
+        int c=55;
+        if(a>b && a>c){
+            System.out.println("value of a is greater than b: "+a);
+        }
+        else if(b>c && b>a){
+            System.out.println("value of b is greater than a: "+b);
+        }
+        else{
+            System.out.println("value of c is greater than a & b: "+c);
+        }
+    }
+}
+
