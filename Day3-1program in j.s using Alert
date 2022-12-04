@@ -1,0 +1,3 @@
+alert("Enter the value of a")
+let a=prompt("Enter here")
+document.write(a)
