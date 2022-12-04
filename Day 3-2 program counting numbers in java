@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Counting {
+    public static void main(String[]args){
+        int i;
+        Scanner rf=new Scanner(System.in);
+        System.out.println("Entre the value while u want to print:");
+        int n=rf.nextInt();
+        System.out.println("Your counting number is:");
+        for(i=1;i<=n;i++){
+           System.out.print(" "+i);
+        }
+    }
+}    
+   
