@@ -1,5 +1,5 @@
 console.time("forloop")
 for(i=0;i<6;i++){
-  console.log(faiz)
+  console.log("faiz")
 }
 console.timeEnd("forloop")
