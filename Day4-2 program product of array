@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Pro_of_array {
+    public static void main(String[]args){
+        int n;
+        int pro=1;
+        Scanner rf=new Scanner(System.in);
+        System.out.println("Enter the Array size:");
+        n=rf.nextInt();
+        int a[]=new int[n];
+        System.out.println("Enter the Array element:");
+        for(int i=0;i<n;i++){
+            a[i]=rf.nextInt();
+        }
+        System.out.println("Array elements are:");
+        for(int i=0;i<n;i++){ 
+            System.out.println(a[i]+" ");
+        }
+        
+        for(int i=0;i<n;i++){
+             pro=pro*a[i];
+        }
+        System.out.println("product of Array elements :");
+        System.out.print(pro+" ");
+        
+    }   
+}
