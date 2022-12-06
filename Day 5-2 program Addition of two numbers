@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Add {
+    public static void main(String[]args){
+        int a,b,n;
+        Scanner rf=new Scanner(System.in);
+        System.out.println("Enter the 1st number:");
+        a=rf.nextInt();
+        System.out.println("Enter the 2nd number:");
+        b=rf.nextInt();
+        n=a+b;
+        System.out.println("Addition of two numbers= "+n);
+        
+    } 
+}
