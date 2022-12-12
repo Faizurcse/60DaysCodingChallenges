@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class add1 {
+    int a,b;
+    add1()
+    {
+        a=0;
+        b=0;
+    }
+    add1(int x,int y)
+    {
+        a=x;
+        b=y;
+    }
+    void input()
+    {
+        Scanner rf=new Scanner(System.in);
+        System.out.println("Enter the first number");
+        a=rf.nextInt();
+        System.out.println("Enter the Second number");
+        b=rf.nextInt();
+    }
+    void display()
+    {
+        System.out.println("a="+a+"b="+b);
+    }
+    void output()
+    {
+        int c;
+        c=a+b;
+        System.out.println("Addition="+c);
+    }
+    public static void main(String args[])
+    {
+        add1 aa=new add1()
+        aa.display();
+        aa.input();
+        aa.output();
+    }
+}
