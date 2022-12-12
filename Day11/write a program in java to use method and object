@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class calss and object {
+    int a,b,sum;
+    Scanner rf=new Scanner(System.in);
+     void takedata()
+    {
+      System.out.println("Enter the number");
+      a=rf.nextInt();
+      System.out.println("Enter the second number");   
+      b=rf.nextInt(); 
+    }  
+     void printdata()
+    {
+     sum=a+b;
+     System.out.println("Sumof two numbers");
+    } 
+    public static void main(Strings args[])
+    {
+        calss and object t=new calss and object();
+        t.takedata();
+        t.printdata();
+
+    }
+}
