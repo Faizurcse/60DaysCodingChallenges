@@ -1,0 +1,50 @@
+Given a gold mine called M of (n x m) dimensions. Each field in this mine contains a positive integer which is the amount of gold in tons. Initially the miner can start from any row in the first column. From a given cell, the miner can move
+
+to the cell diagonally up towards the right 
+to the right
+to the cell diagonally down towards the right
+Find out maximum amount of gold which he can collect.
+
+
+Example 1:
+
+Input: n = 3, m = 3
+M = {{1, 3, 3},
+     {2, 1, 4},
+     {0, 6, 4}};
+Output: 12
+Explaination: 
+The path is {(1,0) -> (2,1) -> (2,2)}.
+
+//code..........
+
+class Solution{
+    public static int goldCollected(int M[][],int x,int y,int n,int m,int dp[][]){
+        if(x<0||x==n||y==m)
+           return 0;
+           
+        if(dp[x][y]!=-1){
+            return dp[x][y];
+        }
+        int right=goldCollected(M,x,y+1,n,m,dp);
+        int updRight=goldCollected(M,x-1,y+1,n,m,dp);
+        int ddRight=goldCollected(M,x+1,y+1,n,m,dp);
+        
+        int maximum = Math.max(Math.max(right,updRight),ddRight);
+        return dp[x][y]=M[x][y]+maximum;
+    }
+    static int maxGold(int n, int m, int M[][])
+    {
+        int maxGold=0;
+        int dp[][]=new int[n][m];
+        for(int i=0;i<n;i++){
+            Arrays.fill(dp[i],-1);
+        }
+        for(int i=0;i<=n;i++){
+            int gold=goldCollected(M,i,0,n,m,dp);
+            maxGold=Math.max(maxGold,gold);
+        }
+         return maxGold;
+    }
+   
+}
