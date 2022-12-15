@@ -1,0 +1,28 @@
+import java.util.*;
+class MaxSubArrays {
+    public static void printSubArrays(int arr[]){
+		
+		int maxSum = Integer.MIN_VALUE;
+        for(int i=0;i<arr.length;i++){
+            for(int j=0;j<arr.length;j++){
+				int ans = 0;
+                for(int k =i;k<=j;k++){
+					ans += arr[k];  
+	 
+				}	
+	               if(ans > maxSum){
+					   maxSum=ans;
+			     
+            }
+			}
+           	   
+		
+    }
+	System.out.println("Maximum sum = "+maxSum);  
+	}
+    public static void main(String[] args) {
+        int arr[] = {2,4,6,8,10};
+        printSubArrays(arr);
+		
+    }
+}
