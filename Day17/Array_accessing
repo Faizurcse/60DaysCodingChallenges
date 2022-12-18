@@ -1,0 +1,13 @@
+public class Array_accessing {
+    public static void main (String[] args){
+        int a[]=new int[5];
+        
+        //giving rendom value why because not insert the value in array
+
+        System.out.println("Accessing index 0:  "+a[0]);
+        System.out.println("Accessing index 1:  "+a[1]);
+        System.out.println("Accessing index 2:  "+a[2]);
+        System.out.println("Accessing index 3:  "+a[3]);
+        System.out.println("Accessing index 4:  "+a[4]);
+    }
+}
