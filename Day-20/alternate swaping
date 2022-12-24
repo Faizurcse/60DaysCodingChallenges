@@ -1,0 +1,22 @@
+public class Alt2 {
+    public static void main (String[] args){
+        int a[]={10,20,30,40,50,60};
+        int n=a.length;
+        System.out.println("Array before swap :");
+        for(int i=0;i<n;i++){
+            System.out.print(" "+a[i]);  
+        }
+        System.out.println();
+        System.out.println("Array after swap :");
+        for(int i=0;i<n;i=i+2){
+            if(i+1<n){
+                int temp=a[i+1];
+                a[i+1]=a[i];
+                a[i]=temp;
+            }
+        }
+        for(int i=0;i<n;i++){
+            System.out.print(" "+a[i]);
+        }
+    }
+}
