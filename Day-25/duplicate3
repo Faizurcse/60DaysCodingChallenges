@@ -1,0 +1,17 @@
+import java.util.*;
+public class dup3 {
+    public static void main(String args[]){
+        int arr[]={1,1,1,2,2,2,3,4};
+        HashSet<Integer> set= new HashSet<>();
+        System.out.println("duplicate element are :");
+        for(int i:arr){
+            boolean b=set.add(i);
+            if(b==false){
+             System.out.print(" "+i);
+            }
+        }
+        System.out.println();
+        System.out.println("After the removing of duplicate element:");
+        System.out.println(set);
+     }
+}
