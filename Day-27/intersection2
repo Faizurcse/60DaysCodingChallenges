@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+public class Inttersection2 {
+    public static void main(String args[]){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int arr1[]={1,1,2,2,3,4,5};
+        int arr2[]={1,1,1,2,2,3};
+        int n=arr1.length;
+        int m=arr2.length;
+        int i=0;
+        int j=0;
+        while(i<n && j<m){
+            if(arr1[i]==arr2[j]){
+                list.add(arr1[i]);
+                i++;
+                j++;
+            }
+            else if(arr1[i]<arr2[j]){
+                i++;
+            }
+            else{
+                j++;
+            }
+        }
+        System.out.println(list);
+    }
+}
