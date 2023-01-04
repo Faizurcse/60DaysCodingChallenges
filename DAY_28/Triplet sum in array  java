@@ -1,0 +1,20 @@
+import java.util.ArrayList;
+public class PairSum {
+    public static void main(String args[]){
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int a[]={1,2,3,4,5};
+        int sum=12;
+        for(int i=0;i<a.length;i++){
+            for(int j=i+1;j<a.length;j++){
+                for(int k=j+1;k<a.length;k++){
+                    if(a[i]+a[j]+a[k]==sum){
+                        list.add(a[i]);
+                        list.add(a[j]);
+                        list.add(a[k]);
+                    }
+                }
+            }
+        }
+        System.out.println(list);
+    }
+}
