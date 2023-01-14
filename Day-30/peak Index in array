@@ -1,0 +1,18 @@
+public class peakIndexInArray {
+    public static void main(String args[]){
+        int a[]={0,1,2,30,7,10,0};
+        int s=0;
+        int e=a.length-1;
+        int mid=(s+e)/2;
+        while(s<e){
+            if(a[mid]<a[mid+1]){
+                s=mid+1;
+            }
+            else{
+                e=mid;
+            }
+            mid=(s+e)/2;
+        }
+        System.out.println("peak index is  "+s+" and element is "+a[s]);
+    }
+}
