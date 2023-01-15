@@ -1,0 +1,33 @@
+public class Binary_SerachinDecendingOrder {
+    
+    public static void binary(int a[],int key){
+        int l=0;
+        int h=a.length;
+        int mid;
+        int flag=0;
+
+        while(l<=h){
+            mid= l+(h-l)/2;
+            if(a[mid]==key){
+                flag=1; 
+                System.out.println("Element "+a[mid]+" on index "+mid);             
+                break;
+            }
+            else if(key<a[mid]){
+                l=mid+1;
+            }
+            else{
+                h=mid-1;
+            }
+        }
+        if(flag==0){
+             
+            System.out.println("Element not found ");
+        }
+        
+    }
+    public static void main(String args[]){
+       int a[]={19,16,12,11,10,9,6,4};
+        binary(a,6);
+    }
+}
