@@ -1,0 +1,18 @@
+class Solution
+{ 
+    // Function to find starting and end index 
+    static int[] findIndex(int a[], int N, int key) 
+    { 
+        int count=0,arr[]={-1,-1};
+        for( int i=0;i<N;i++){
+            if(count==0 && a[i]==key){
+                arr[0]=arr[1]=i;
+                count++;
+            }
+            else if(count!=0 && a[i]==key){
+                arr[1]=i;
+            }
+        }
+        return arr;
+    }
+}
