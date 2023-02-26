@@ -1,0 +1,52 @@
+Given a string consisting of lowercase english alphabets, reverse only the vowels present in it and print the resulting string.
+
+Example 1:
+
+Input:
+S = "geeksforgeeks"
+Output: geeksforgeeks
+Explanation: The vowels are: e, e, o, e, e
+Reverse of these is also e, e, o, e, e.
+
+Example 2:
+
+Input: 
+S = "practice"
+Output: prectica
+Explanation: The vowels are a, i, e
+Reverse of these is e, i, a.
+
+code//
+
+class Solution
+{
+     public static boolean isVowel(char c){
+         if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u'){
+            return true;
+         }
+        return false;
+    }
+    String modify (String s)
+    {
+        int i=0; int j=s.length()-1;
+        char ch[]=s.toCharArray();
+        while(i<j){
+       
+          if(!isVowel(ch[i])){
+             i++;
+             continue;
+            }
+           else if(!isVowel(ch[j])){
+              j--;
+              continue;
+            }
+           char temp=ch[i];
+           ch[i]=ch[j];
+           ch[j]=temp;
+           i++;
+            j--;
+        }
+        String k=String.valueOf(ch);
+        return k;
+    }
+}
