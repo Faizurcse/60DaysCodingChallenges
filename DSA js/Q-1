@@ -1,0 +1,10 @@
+<script>
+        function test(data){
+            if(data>0){
+                test(data-1)
+            }
+            console.log(data)
+        }
+        let data = 10;
+        test(data)
+    </script>
