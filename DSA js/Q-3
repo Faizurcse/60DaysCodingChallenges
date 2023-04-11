@@ -1,0 +1,10 @@
+<title>RESURSION function</title>
+    <script>
+        function arr(data){
+            console.log(data)
+            if(data<15)
+                arr(data+1)
+        }
+         let data = 0
+       arr(data)
+    </script>
