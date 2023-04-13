@@ -1,0 +1,15 @@
+<title>reverse array using recursion</title>
+    <script>
+        let arr = [12,34,45,56,78]
+        let temp
+        function test(arr,start,end){
+            console.warn(arr)
+            if(start<=end){
+                temp = arr[start]
+                arr[start] = arr[end]
+                arr[end] = temp
+                test(arr,start+1,end-1)
+            }
+        }
+        test(arr,0,arr.length-1)
+    </script>
