@@ -1,0 +1,37 @@
+Q).. given string convert into reverse string
+
+PROGRAM //
+
+
+<script>
+        let data = []
+        let size = data.length
+        function push(val) {
+            data[size] = val
+            size++
+        }
+        function pop() {
+            lastItem = data[size - 1]
+            size--
+            data.length = size
+            // console.log(lastItem)
+            return lastItem
+        }
+        function reverseStr(item) {
+            for (let i = 0; i < item.length; i++) {
+                push(item[i])
+            }
+            for (let i = 0; i < item.length; i++) {
+                // pop()
+                // k= pop()
+                item[i] = pop() //call by refrence in js using here
+                // console.log(k)
+            }
+
+        }
+        let str = "abcdefghijklmnopqrstuvwxyz"
+        let val = str.split('') // string convert into array
+        reverseStr(val)
+        string = val.join("") // array convert into string
+        console.log("Reverse string is : ", string)
+    </script>
