@@ -1,0 +1,45 @@
+Given an array arr[] of n integers. Check whether it contains a triplet that sums up to zero. 
+
+Example 1:
+
+Input: n = 5, arr[] = {0, -1, 2, -3, 1}
+Output: 1
+Explanation: 0, -1 and 1 forms a triplet
+with sum equal to 0.
+Example 2:
+
+Input: n = 3, arr[] = {1, 2, 3}
+Output: 0
+Explanation: No triplet with zero sum exists. 
+
+program -->
+
+class Solution
+{
+    // arr[]: input array
+    // n: size of the array
+    //Function to find triplets with zero sum.
+	public boolean findTriplets(int arr[] , int n)
+    {
+        Arrays.sort(arr);
+        //add code here.
+        for(int i=0;i<arr.length;i++){
+            int left = i+1;
+            int right = arr.length-1;
+            while(left<right){
+                int sum = arr[i]+arr[left]+arr[right];
+                if(sum==0){
+                    return true;
+                   // left++; right--;
+                }
+                else if(sum<0){
+                    left++;
+                }
+                else{
+                    right--;
+                }
+            }
+        }
+        return false;
+    }
+
