@@ -1,0 +1,40 @@
+Reverse a String
+BasicAccuracy: 69.49%Submissions: 230K+Points: 1
+Apply for Mega Job-A-Thon: Fresher Edition | 30+ Opportunities | Avg CTC: 3-15 LPA  
+
+You are given a string s. You need to reverse the string.
+
+Example 1:
+
+Input:
+s = Geeks
+Output: skeeG
+Example 2:
+
+Input:
+s = for
+Output: rof
+Your Task:
+
+You only need to complete the function reverseWord() that takes s as parameter and returns the reversed string.
+
+Expected Time Complexity: O(|S|).
+Expected Auxiliary Space: O(1).
+
+program//
+
+class Reverse
+{
+    // Complete the function
+    // str: input string
+    public static String reverseWord(String str)
+    {
+        // Reverse the string str
+        String s = "";
+        int n = str.length();
+        for(int i=n-1;i>=0;i--){
+            s=s+str.charAt(i);
+        }
+        return s;
+    }
+}
