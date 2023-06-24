@@ -1,0 +1,82 @@
+Remove common characters and concatenate
+BasicAccuracy: 30.78%Submissions: 55K+Points: 1
+Join the most popular course on DSA. Master Skills & Become Employable by enrolling today! 
+Given two strings s1 and s2. Modify both the strings such that all the common characters of s1 and s2 are to be removed and the uncommon characters of s1 and s2 are to be concatenated.
+Note: If all characters are removed print -1.
+
+Example 1:
+
+Input:
+s1 = aacdb
+s2 = gafd
+Output: cbgf
+Explanation: The common characters of s1
+and s2 are: a, d. The uncommon characters
+of s1 and s2 are c, b, g and f. Thus the
+modified string with uncommon characters
+concatenated is cbgf.
+Example 2:
+
+Input:
+s1 = abcs
+s2 = cxzca
+Output: bsxz
+Explanation: The common characters of s1
+and s2 are: a,c. The uncommon characters
+of s1 and s2 are b,s,x and z. Thus the
+modified string with uncommon characters
+concatenated is bsxz.
+Your Task:
+The task is to complete the function concatenatedString() which removes the common characters, concatenates, and returns the string. If all characters are removed then return -1.
+
+Expected Time Complexity: O(N).
+Expected Auxiliary Space: O(Number of distinct characters).
+Note: N = |Length of Strings|
+
+PROGRAM-->
+class Solution
+{
+    //Function to remove common characters and concatenate two strings.
+    public static String concatenatedString(String s1,String s2)
+    {
+        // Your code here
+        String ans = "";
+         for(int i=0;i<s1.length();i++){
+             String c = String.valueOf(s1.charAt(i));
+             if(!s2.contains(c)){
+                ans = ans+String.valueOf(s1.charAt(i));
+            }
+         }
+        for(int i=0;i<s2.length();i++){
+            String c = String.valueOf(s2.charAt(i));
+            if(!s1.contains(c)){
+                ans = ans+String.valueOf(s2.charAt(i));
+            }
+        }
+          if(ans.length()==0){
+          ans = "-1";
+        }
+       return ans;
+     
+     //PROGRAM--> 2
+     
+     String buff = s1+s2;
+        String ans = "";
+        
+        for(int i=0;i<buff.length();i++){
+            String a = "" + buff.charAt(i);;
+            if(s1.contains(a) && s2.contains(a)){
+                
+            }
+            else{
+                ans = ans + a;
+            }
+        }
+        
+        if(ans.length() == 0){
+            return "-1";
+        }
+        
+        return ans;
+    }
+}
